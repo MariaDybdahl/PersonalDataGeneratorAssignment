@@ -10,7 +10,5 @@ namespace Data
         {
         }
 
-        public DbSet<Person> People => Set<Person>();
-
     }
 }
