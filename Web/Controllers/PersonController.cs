@@ -10,12 +10,10 @@ namespace Web.Controllers
     public class PersonController : ControllerBase
     {
 
-        private readonly AppDbContext _appDbContext;
-
-        public PersonController(AppDbContext appDbContext)
+        public PersonController()
         {
-            _appDbContext = appDbContext;
         }
+
         // GET: api/<PersonController>
         [HttpGet]
         public IEnumerable<string> Get()
