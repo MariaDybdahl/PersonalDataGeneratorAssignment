@@ -1,3 +1,4 @@
+using Core;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,6 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+builder.Services.AddSingleton<Address>(new Address());
+builder.Services.AddSingleton<Person>(new Person());
 
 var app = builder.Build();
 
