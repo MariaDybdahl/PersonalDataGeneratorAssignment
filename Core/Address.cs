@@ -11,6 +11,8 @@ namespace Core
         { 
  
         }
+
+        private readonly string connectionString = "server=localhost;port=3308;database=addresses;user=root;password=root";
         private static int _townCount = 0;
         private readonly Random _random = new();
 
@@ -40,7 +42,6 @@ namespace Core
 
         public Address GetRandomTownAndPostalCode()
         {
-            var connectionString = "server=localhost;port=3308;database=addresses;user=root;password=root";
 
             using (IDbConnection db = new MySqlConnection(connectionString))
             {
